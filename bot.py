@@ -288,12 +288,4 @@ async def forceremind(interaction: discord.Interaction, member: discord.Member):
     await interaction.response.send_message("Sent", ephemeral=True)
 
 # ---------------- RUN ----------------
-try:
-    print("BOT STARTING...")
-    print("TOKEN EXISTS:", bool(TOKEN))
-    print("TOKEN LENGTH:", len(TOKEN) if TOKEN else 0)
-
-    bot.run(TOKEN)
-
-except Exception as e:
-    print("BOT CRASH ERROR:", e)
+bot.run(TOKEN)
