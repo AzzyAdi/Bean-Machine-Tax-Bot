@@ -1,0 +1,16 @@
+{
+  "guild_id": "1390458056978071563",
+  "owner_id": "1458813191697072271",
+  "reminder_channel_id": "1515601050999193632",
+  "timezone": "UTC",
+  "footer": "Made By Azzy Adi",
+
+  "roles": {
+    "TRAINEE": "TRAINEE",
+    "WAITER": "WAITER",
+    "BARTENDER": "BARTENDER",
+    "KITCHEN_HEAD": "KITCHEN HEAD",
+    "MANAGER": "Manager",
+    "ASSISTANT_MANAGER": "Assistant Manager"
+  }
+}
