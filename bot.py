@@ -294,4 +294,3 @@ print("TOKEN LENGTH:", len(TOKEN) if TOKEN else 0)
 print("TOKEN STARTS WITH:", TOKEN[:5] if TOKEN else "NONE")
 
 bot.run(TOKEN)
-bot.run(TOKEN)
