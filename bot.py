@@ -1,4 +1,6 @@
 import discord
+from flask import Flask
+from threading import Thread
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 import os
@@ -9,6 +11,18 @@ from datetime import datetime, timezone
 # ---------------- LOAD ----------------
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
+# ---------------- WEB SERVER ----------------
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Bot is running"
+
+def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+Thread(target=run_web).start()
 
 with open("config.json", "r", encoding="utf-8") as f:
     config = json.load(f)
