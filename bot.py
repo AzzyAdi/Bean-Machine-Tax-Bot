@@ -271,19 +271,19 @@ async def forceremind(interaction: discord.Interaction, member: discord.Member):
     desc = (
         f"👤 Employee: {member.mention}\n\n"
         "📌 Reason:\n"
-        "This is a manual reminder sent by management.\n\n"
+        "This is a Tax Reminder sent by management.\n\n"
         f"⚠️ Risk Level: {level}\n\n"
         "💰 Action:\n"
-        "Please complete your tax payment.\n"
+        "Please complete your tax payment within 2 days of receiving this reminder.\n"
     )
 
     if overdue > 0:
         desc += (
             f"\n📊 Overdue Periods: {overdue}\n\n"
-            "🚨 Please clear your previous dues as soon as possible."
+            "🚨 Failure to complete the payment by the specified deadline may result in additional penalties and fines."
         )
 
-    await channel.send(embed=embed("☕ Manual Tax Reminder", desc, color))
+    await channel.send(embed=embed("☕ Tax Reminder", desc, color))
 
     await interaction.response.send_message("Sent", ephemeral=True)
 
